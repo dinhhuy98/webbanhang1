@@ -1,0 +1,43 @@
+.site-content{
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	   
+}
+
+.menutop2 .img-responsive{
+	height:50%;
+	width:80%;
+}
+.menutop .row{
+	height:30px;
+	padding-top:5px;
+	background-color: black;
+	color:white;
+	width:100%;
+	margin: 0px;
+}
+.footer{
+	width:100%;
+}
+.footer .container {
+	background-color: white;
+	color:white;
+	width:100%;
+}
+.footer .row {
+	height:30px;
+	padding-top:5px;
+	background-color: black;
+	color:white;
+	width:100%;
+	margin: 0px;
+
+
+	
+}
+.border-black{
+	border: 1px solid lightgray;
+	margin-bottom: 10px;
+}
+.card-body .row{
+	margin-bottom: 5px;
+}
