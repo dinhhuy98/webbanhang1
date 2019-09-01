@@ -4,7 +4,6 @@
 		public $host='localhost';
 		public $user='root';
 		public $pass='';
-		public $db='phpcms';
-		public $prefix='ss';
+		public $db='webbanhang1';
 	}
   ?>

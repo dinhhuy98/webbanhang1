@@ -23,7 +23,7 @@
 			if(isset($_GET['id'])){
 				$path.='detail.php';
 			}
-			else if($_GET['cat']){
+			else if(isset($_GET['cat'])){
 				$path.='category.php';
 			}
 			else

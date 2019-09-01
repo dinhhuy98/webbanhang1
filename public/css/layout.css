@@ -41,3 +41,13 @@
 .card-body .row{
 	margin-bottom: 5px;
 }
+ .menutop a{
+	text-align: center;
+  text-decoration: none;
+  margin-right:10px;
+  color:white;
+
+}
+.menutop li{
+	list-style-type: none;
+}
