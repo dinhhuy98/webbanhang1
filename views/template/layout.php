@@ -28,13 +28,18 @@
 		<?php loadModule('mainmenu');?>
 	</section>
 <!--End main menu-->
-
+<div class="container">
+	<div class="row">
+<!--Tag menu-->
+			<?php loadModule('tag');?>
+	<!--End Tag menu-->
 <!--Content -->
-	<section class="clearfix main-content">
-		<?php loadComponents();  ?>
-	</section>
+		<section class="clearfix main-content">
+			<?php loadComponents();  ?>
+		</section>
 <!--End Conten-->
-
+	</div>
+</div>
 <!--Footer-->
 	<section class="clearfix footer">
     <?php loadModule('footer');?>

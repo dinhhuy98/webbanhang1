@@ -19,18 +19,14 @@
 	function loadComponents(){
 		$path='views/components/';
 		if(isset($_GET['option'])){
-			$path.=$_GET['option'].'/';
-			if(isset($_GET['id'])){
-				$path.='detail.php';
-			}
-			else if(isset($_GET['cat'])||isset($_GET['tag'])){
-				$path.='category.php';
-			}
+			$path.=$_GET['option'];
+			if(isset($_GET['action']))
+				$path.='/'.$_GET['action'].'.php';
 			else
-				$path.='index.php';
+				$path.='/index.php';
 		}
 		else{
-			$path.='trangchu/index.php';
+			$path.='dashboard/index.php';
 		}
 		if(file_exists($path))
 			include_once($path);
