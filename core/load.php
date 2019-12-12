@@ -21,14 +21,18 @@
 		if(isset($_GET['option'])){
 			$path.=$_GET['option'].'/';
 			if(isset($_GET['id'])){
-				$path.='detail.php';
+				if($_GET['option']=="giohang")
+					$path.="addcart.php";
+				else
+					$path.='detail.php';
 			}
 			else if(isset($_GET['cat'])||isset($_GET['tag'])){
 				$path.='category.php';
 			}
 			else
 				$path.='index.php';
-		}
+			}
+
 		else{
 			$path.='trangchu/index.php';
 		}

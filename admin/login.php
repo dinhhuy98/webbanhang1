@@ -1,11 +1,27 @@
 <?php 
 	session_start();
+	if(isset($_SESSION['user_admin'])){
+		header('location:index.php');
+	}
+
 	include_once("../config.php");
 	include_once('core/Database.php');
 	include_once('core/load.php');
+	$user = loadModel('user');
+	$check=-1;
 	if(isset($_POST["login"])){
 		$username=$_POST["username"];
-		echo $password=password_hash($_POST['password'],PASSWORD_DEFAULT);
+		$password=$_POST['password'];
+		$data = $user->selectByUsername($username);
+		while($row=mysqli_fetch_assoc($data)){
+			if(password_verify($password,$row['password'])){
+				$check=1;
+				$_SESSION['user_admin']=$row['username'];
+				$_SESSION['fullname']=$row['hoten'];
+				header("location:index.php");
+			}
+		}
+		$check=0;
 		
 	}
  ?>
@@ -30,7 +46,7 @@
 				<div class="avatar">
 					<!--<img src="/examples/images/avatar.png" alt="Avatar">-->
 				</div>				
-				<h4 class="modal-title">Member Login</h4>	
+				<h4 class="modal-title">Admin Login</h4>	
 			</div>
 			<div class="modal-body">
 				<form action="#" method="post">
@@ -43,7 +59,10 @@
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary btn-lg btn-block login-btn" name="login">Login</button>
 					</div>
-					<p><?php echo "&nbsp"; ?></p>
+					<div class="panel">
+					<p class="text-danger pull-left"><?php echo ($check==0)? "&nbspSai thông tin đăng nhập!":"&nbsp"; ?></p>
+					
+					</div>
 				</form>
 			</div>
 			<div class="modal-footer">

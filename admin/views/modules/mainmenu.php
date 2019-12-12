@@ -35,5 +35,11 @@
      		</ul>
  		</li>
     </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><h4 style="display: block;padding-top:16px;padding-bottom: 14px; color:white; "><span class="glyphicon glyphicon-user"></span><?php echo " ".$_SESSION['fullname'] ?></h4></li>
+      <li><a class="h4" href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a></li>
+    </ul>
+
   </div>
 </nav>

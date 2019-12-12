@@ -19,5 +19,4 @@
 			return mysqli_num_rows(mysqli_query($this->conn,$sql));
 	}
 	}
-
 ?>

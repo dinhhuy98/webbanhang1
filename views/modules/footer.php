@@ -1,4 +1,4 @@
-		<div class="container">
+		<div class="container mx-auto">
 			<div class="row text-center">
 				<div class="col-md-4">Liên hệ</div>
 				<div class="col-md-4">Hỗ trợ khách hàng</div>

@@ -15,8 +15,8 @@
                   echo $row["name"]."</strong></h5>";
                   echo "<p class='card-text text-danger'>".number_format($row["cost"],0," ",".")."đ</p>";
                   echo "</div><div class='row text-center' style='margin-top:20px;'>
-                  <a href='#' class='btn btn-primary'>Xem chi tiết</a>
-                  <a href='#' class='btn btn-primary'>Thêm giỏ hàng</a></div>
+                  <a href='?option=sanpham&id=".$row['id']."' class='btn btn-primary'>Xem chi tiết</a>
+                  <a href='?option=giohang&id=".$row['id']."' class='btn btn-primary'>Thêm giỏ hàng</a></div>
                 </div>
             
           </div>";

@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,20 +32,21 @@
 <div class="container">
 	<div class="row">
 <!--Tag menu-->
-			<?php loadModule('tag');?>
+<?php loadModule('tag');?>
 	<!--End Tag menu-->
 <!--Content -->
-		<section class="clearfix main-content">
-			<?php loadComponents();  ?>
-		</section>
+	<section class="clearfix main-content" style="min-height:600px;">
+		<?php loadComponents();  ?>
+	</section>
 <!--End Conten-->
 	</div>
 </div>
 <!--Footer-->
-	<section class="clearfix footer">
+	<section class="clearfix footer ">
     <?php loadModule('footer');?>
 	</section>
   <!--End footer-->
   </div>
 </body>
 </html>
+<?php ob_end_flush(); ?>

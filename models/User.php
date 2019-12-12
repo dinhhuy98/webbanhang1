@@ -12,8 +12,9 @@ class User extends Database{
 		$sql="DELETE FROM users WHERE id=$id;";
 		mysqli_query($this->conn,$sql);
 	}
-	function insert($name, $category, $tag, $cost){
-		$sql = "INSERT INTO item(name,category,tag,cost) VALUES ('$name',$category,$tag,$cost)";
+	function insert($username, $password, $fullname, $email, $sdt){
+		$sql = "INSERT INTO users(username,password,hoten,email,role,sdt) VALUES ('$username','$password','$fullname','$email',2,'$sdt')";
+		
 		return mysqli_query($this->conn,$sql);
 	}
 	function selectById($id){
